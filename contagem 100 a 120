@@ -7,7 +7,7 @@ import time
 
 st.title("Laço de repetiçao - FOR")
 
-st.header("Contagem de 1 a 120.")
+st.header("Contagem de 100 a 120.")
 
 if st.button("Iniciar"):
     for i in range(100,120 +1 ,2) :
