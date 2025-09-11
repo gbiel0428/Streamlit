@@ -1,0 +1,18 @@
+import streamlit as st
+import time
+
+import streamlit as st
+
+N1 = st.number_input("N1: ", step=1)
+N2 = st.number_input("N2: ", step=1)
+N3 = st.number_input("N3: ", step=1)
+N4 = st.number_input("N4: ", step=1)
+N5 = st.number_input("N5: ", step=1)
+
+soma = N1 + N2 + N3 + N4 + N5
+
+if st.button("Verificar soma."):
+    st.success(f"A soma foi: {soma}")
+    
+else: 
+    st.warning("Aguardando a soma.")
