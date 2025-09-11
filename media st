@@ -1,0 +1,11 @@
+import streamlit as st
+
+N1 = st.number_input("Digite o N1:", step=1)
+N2 = st.number_input("Digite o N2:", step=1)
+N3 = st.number_input("Digite o N3:", step=1)
+N4 = st.number_input("Digite o N4:", step=1)
+
+media = (N1 + N2 + N3 + N4) / 4  
+
+if st.button("Calcular Média"):
+    st.success(f"Sua média foi: {media}")
