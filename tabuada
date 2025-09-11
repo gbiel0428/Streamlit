@@ -1,0 +1,15 @@
+import streamlit as st
+import time
+
+st.title("Multiplicação entre dois números")
+
+n1 = st.number_input("Informe o primeiro número:", min_value=0,step=1)
+
+
+if st.button("tabuada"):
+    for i in range(1,11):
+     st.info(f"{n1} x {i} = {n1 * i}")
+     time.sleep(1)
+    st.header("fim")
+else:
+     st.warning("Aguardando a verificação.")
