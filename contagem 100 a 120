@@ -1,12 +1,16 @@
+#Escreva um algoritmo que mostra os
+#Numeros 100 a 120.
+
+
 import streamlit as st
 import time
 
 st.title("Laço de repetiçao - FOR")
 
-st.header("Contagem de 1 a 10.")
+st.header("Contagem de 1 a 120.")
 
 if st.button("Iniciar"):
-    for i in range(1,11):
+    for i in range(100,120 +1 ,2) :
         st.write(i)
         time.sleep(1)
     st.header("FIM")
