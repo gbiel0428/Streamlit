@@ -1,0 +1,15 @@
+import streamlit as st
+import time
+
+st.title("Contagem regressiva")
+
+numero = st.number_input("Informe um número: ",step=1)
+
+if st.button("Iniciar contagem."):
+ for i in range(numero , 0 , -1):
+    st.info(i)
+    time.sleep(1)   
+ st.header("Fim")
+
+else:
+    st.warning("Aguardando a contagem.")
