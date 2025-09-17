@@ -1,0 +1,20 @@
+import streamlit as st
+
+st.title("Login and Senha.")
+
+Login = "GB"
+Senha = "12"
+
+LOGIN =st.text_input("informe seu login: ")
+senha = st.text_input("informe sua senha: ")
+tentativas = 3
+
+if st.button("Verificar"):
+    if LOGIN == Login and senha== Senha:
+     st.success(F"Bem-vindo(a).")
+    else:
+     st.error(f"Senha ou Login incorreto.")
+    
+
+else:
+     st.warning("Aguardando") 
