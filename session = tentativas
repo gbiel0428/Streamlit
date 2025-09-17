@@ -1,0 +1,28 @@
+import streamlit as st
+
+st.title("Login and Senha.")
+
+Login = "GB"
+Senha = "12"
+
+st.session_state.setdefault("Desabilitar", False)
+st.session_state.setdefault("tentativas", 0)
+
+
+LOGIN =st.text_input("informe seu login: ")
+senha = st.text_input("informe sua senha: ")
+
+
+
+if st.button("Verificar"):
+    if LOGIN == Login and senha== Senha:
+     st.success(F"Bem-vindo(a).")
+    else:
+        st.session_state.tentativas += 1
+    if st.session_state.tentativas <= 3:
+       st.error(f"Senha ou Login incorreto,tentativas: {st.session_state.tentativas}")
+    else:
+      st.session_state.campo = True
+      st.error("Limite de tentativas alcançados.")
+else:
+    st.warning("Aguardando.")
