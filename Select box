@@ -1,0 +1,14 @@
+import streamlit as st
+
+st.title("Selecione sua Senha")
+
+senha_correta = "12"
+opcoes_senhas = ["12", "10", "20", "19"]
+
+senha_selecionada = st.selectbox("Qual sua senha?", opcoes_senhas)
+
+if st.button("Verificar"):
+    if senha_selecionada == senha_correta:
+        st.success("Bem-vindo(a).")
+    else:
+        st.error("Senha incorreta. Tente novamente.")
